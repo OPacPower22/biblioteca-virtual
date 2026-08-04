@@ -1,0 +1,169 @@
+/* =========================================================
+   Biblioteca Virtual · Fraternidad No. 1 — hoja de estilos
+   Paleta institucional validada en Memoria_Tecnica.md (MT-0021):
+   rojo #C60800, dorado #EFB810, blanco #FFFFFF, verde #7BB369.
+   ========================================================= */
+
+:root{
+  --rojo:#C60800;
+  --rojo-oscuro:#8a0600;
+  --rojo-tenue:#fbeae8;
+  --dorado:#EFB810;
+  --dorado-oscuro:#b98900;
+  --dorado-tenue:#fdf3d8;
+  --verde:#7BB369;
+  --blanco:#FFFFFF;
+  --texto:#241411;
+  --texto-tenue:#6b5a52;
+  --borde:#ecdfc6;
+  --radio:6px;
+  --fuente-titulo:'Cinzel', Georgia, 'Times New Roman', serif;
+  --fuente-texto:'EB Garamond', Georgia, serif;
+  --max-ancho:1280px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--blanco);
+  color:var(--texto);
+  font-family:var(--fuente-texto);
+  font-size:18px;
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;margin:0;padding:0;}
+h1,h2,h3{font-family:var(--fuente-titulo);color:var(--rojo);margin:0 0 .5em;}
+.contenedor{max-width:var(--max-ancho);margin:0 auto;padding:0 32px;}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5em;
+  padding:12px 22px;
+  border-radius:var(--radio);
+  font-family:var(--fuente-titulo);
+  font-size:.8rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  border:1px solid var(--rojo);
+  cursor:pointer;
+  background:transparent;
+  color:var(--rojo);
+  transition:background .2s ease, transform .15s ease;
+}
+.btn:hover{background:var(--rojo-tenue);transform:translateY(-1px);}
+.btn-oro{
+  background:linear-gradient(135deg,var(--dorado),var(--dorado-oscuro));
+  color:var(--texto);
+  border-color:transparent;
+}
+
+.encabezado{
+  background:var(--blanco);
+  border-bottom:1px solid var(--borde);
+  padding:16px 0;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.marca{display:flex;align-items:center;gap:12px;font-family:var(--fuente-titulo);}
+.marca img{width:32px;height:32px;color:var(--rojo);}
+.marca strong{display:block;font-size:.95rem;color:var(--rojo);}
+.marca span{display:block;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-tenue);}
+
+.cabecera{
+  padding:56px 0 40px;
+  text-align:center;
+  background:radial-gradient(ellipse at 50% 0%, rgba(239,184,16,.18), transparent 60%), linear-gradient(160deg, var(--rojo), var(--rojo-oscuro));
+}
+.cabecera h1{color:var(--blanco);}
+.cabecera p{color:rgba(255,255,255,.85);max-width:640px;margin:12px auto 0;}
+
+.controles{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:36px;
+}
+.buscador{
+  flex:1;
+  min-width:220px;
+  background:var(--blanco);
+  border:1px solid var(--borde);
+  border-radius:4px;
+  padding:12px 16px;
+  color:var(--texto);
+  font-family:var(--fuente-texto);
+  font-size:1rem;
+}
+.buscador:focus{outline:none;border-color:var(--rojo);}
+.filtros{display:flex;gap:8px;flex-wrap:wrap;}
+.filtro-chip{
+  padding:8px 16px;
+  border-radius:20px;
+  border:1px solid var(--borde);
+  background:none;
+  color:var(--texto-tenue);
+  font-family:var(--fuente-titulo);
+  font-size:.72rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.filtro-chip.activo{background:var(--rojo);color:var(--blanco);border-color:var(--rojo);}
+
+.catalogo{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:24px;
+  padding-bottom:80px;
+}
+.tarjeta-libro{
+  background:var(--blanco);
+  border:1px solid var(--borde);
+  border-radius:var(--radio);
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  box-shadow:0 12px 30px rgba(198,8,0,.08);
+}
+.tarjeta-libro .categoria{
+  font-family:var(--fuente-titulo);
+  font-size:.68rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--verde);
+}
+.tarjeta-libro h3{font-size:1.15rem;margin:0;color:var(--texto);}
+.tarjeta-libro .autor{color:var(--texto-tenue);font-size:.9rem;margin:0;}
+.tarjeta-libro .descripcion{color:var(--texto-tenue);font-size:.92rem;flex:1;margin:0;}
+.tarjeta-libro .meta{font-size:.8rem;color:var(--texto-tenue);opacity:.8;}
+.tarjeta-libro .acciones{display:flex;gap:10px;margin-top:8px;}
+
+.sin-resultados{
+  text-align:center;
+  color:var(--texto-tenue);
+  padding:60px 0;
+  display:none;
+}
+
+.pie{
+  border-top:3px solid var(--rojo);
+  padding:28px 0;
+  text-align:center;
+  color:var(--texto-tenue);
+  font-size:.85rem;
+}
+.pie a{color:var(--rojo);}
+
+@media (max-width:640px){
+  .controles{flex-direction:column;align-items:stretch;}
+}

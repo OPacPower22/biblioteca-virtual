@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblioteca Virtual · Fraternidad No. 1</title>
+<meta name="description" content="Catálogo digital de acceso público de la Resp.·. Log.·. Simb.·. Fraternidad No. 1.">
+<link rel="icon" href="assets/img/mark.png" type="image/png">
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor nav">
+    <a href="../10_PROYECTOS/IAF/index.html" class="marca">
+      <img src="assets/img/mark.png" alt="">
+      <span>
+        <strong>Biblioteca Virtual</strong>
+        <span>Fraternidad No. 1 · Or.·. de Veracruz</span>
+      </span>
+    </a>
+    <a href="../10_PROYECTOS/IAF/index.html" class="btn">← Volver al sitio principal</a>
+  </div>
+</header>
+
+<main>
+  <section class="cabecera">
+    <h1>Biblioteca Virtual</h1>
+    <p>Catálogo digital de acceso público con obras de filosofía masónica, historia y simbolismo. Los préstamos de la biblioteca física de la Logia se gestionan por separado, desde el módulo Biblioteca de Fraternitas-ERP.</p>
+  </section>
+
+  <div class="contenedor">
+    <div class="controles">
+      <input type="text" id="buscador" class="buscador" placeholder="Buscar por título o autor…">
+      <div class="filtros">
+        <button class="filtro-chip activo" data-categoria="todas">Todas</button>
+        <button class="filtro-chip" data-categoria="historia">Historia</button>
+        <button class="filtro-chip" data-categoria="filosofia">Filosofía</button>
+        <button class="filtro-chip" data-categoria="simbolismo">Simbolismo</button>
+      </div>
+    </div>
+
+    <div class="catalogo" id="catalogo"></div>
+    <p class="sin-resultados" id="sinResultados">No se encontraron obras con ese criterio.</p>
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    Biblioteca Virtual · Resp.·. Log.·. Simb.·. Fraternidad No. 1 · Or.·. de Veracruz —
+    catálogo de ejemplo, ver <a href="README.md">README.md</a> para agregar obras reales.
+  </div>
+</footer>
+
+<script src="JS/catalog.js"></script>
+<script src="JS/main.js"></script>
+</body>
+</html>
