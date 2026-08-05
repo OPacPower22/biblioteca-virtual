@@ -6,17 +6,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let categoriaActiva = "todas";
 
+  function obtenerIdDrive(url) {
+    const match = url.match(/\/d\/([A-Za-z0-9_-]+)/);
+    return match ? match[1] : null;
+  }
+
+  function urlParaLeer(url) {
+    const id = obtenerIdDrive(url);
+    return id ? "https://drive.google.com/file/d/" + id + "/view?usp=sharing" : url;
+  }
+
+  function urlParaDescargar(url) {
+    const id = obtenerIdDrive(url);
+    return id ? "https://drive.google.com/uc?export=download&id=" + id : url;
+  }
+
   function crearTarjeta(obra) {
     const tarjeta = document.createElement("article");
     tarjeta.className = "tarjeta-libro";
+    const enlaceLeer = urlParaLeer(obra.archivo);
+    const enlaceDescargar = urlParaDescargar(obra.archivo);
     tarjeta.innerHTML =
       '<span class="categoria">' + obra.categoriaLabel + '</span>' +
       '<h3>' + obra.titulo + '</h3>' +
       '<p class="autor">' + obra.autor + ' · ' + obra.anio + '</p>' +
       '<p class="descripcion">' + obra.descripcion + '</p>' +
       '<div class="acciones">' +
-      '<a class="btn btn-oro" href="' + obra.archivo + '" target="_blank" rel="noopener">Leer</a>' +
-      '<a class="btn" href="' + obra.archivo + '" download>Descargar</a>' +
+      '<a class="btn btn-oro" href="' + enlaceLeer + '" target="_blank" rel="noopener">Leer</a>' +
+      '<a class="btn" href="' + enlaceDescargar + '" download>Descargar</a>' +
       '</div>';
     return tarjeta;
   }
