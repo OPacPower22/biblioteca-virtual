@@ -1,7 +1,7 @@
 /**
  * Catálogo de la Biblioteca Virtual.
- * Este es un catálogo de EJEMPLO. Sustitúyelo por las obras reales de la Logia:
- * agrega/edita entradas aquí y coloca el archivo correspondiente en assets/docs/.
+ * Este es un catálogo de EJEMPLO. Los enlaces apuntan a Google Drive para
+ * permitir lectura y descarga directa en GitHub Pages sin depender de rutas locales.
  */
 const CATALOGO = [
   {
@@ -12,7 +12,7 @@ const CATALOGO = [
     categoriaLabel: "Historia",
     anio: 1723,
     descripcion: "Texto fundacional de la masonería moderna, base de las constituciones de numerosas obediencias.",
-    archivo: "assets/docs/constituciones-anderson.pdf"
+    archivo: "https://drive.google.com/file/d/1lZJ3Wdo1-IZ7vhP4CbZS2EgJaJjTukSE/view?usp=drive_link"
   },
   {
     id: "obr-002",
@@ -22,7 +22,7 @@ const CATALOGO = [
     categoriaLabel: "Filosofía",
     anio: 1871,
     descripcion: "Comentario extenso sobre los grados del Rito Escocés Antiguo y Aceptado.",
-    archivo: "assets/docs/morals-and-dogma.pdf"
+    archivo: "https://drive.google.com/file/d/1HqCyqnZJLEka9IBIpHxB7JolljPZR4U6/view?usp=drive_link"
   },
   {
     id: "obr-003",
@@ -32,7 +32,7 @@ const CATALOGO = [
     categoriaLabel: "Historia",
     anio: 1914,
     descripcion: "Panorama histórico del origen y desarrollo de la institución masónica.",
-    archivo: "assets/docs/the-builders.pdf"
+    archivo: "https://drive.google.com/file/d/1ChLDjOPqDTr-nHmAvjvOCMlKccr3EhuH/view?usp=drive_link"
   },
   {
     id: "obr-004",
@@ -42,7 +42,7 @@ const CATALOGO = [
     categoriaLabel: "Historia",
     anio: 1390,
     descripcion: "El documento masónico conocido más antiguo, origen de las constituciones góticas.",
-    archivo: "assets/docs/manuscrito-regius.pdf"
+    archivo: "https://drive.google.com/file/d/1yKNBfjCnQ4jOdZJP1wNnLltvIqBcH_fP/view?usp=drive_link"
   },
   {
     id: "obr-005",
@@ -52,16 +52,16 @@ const CATALOGO = [
     categoriaLabel: "Simbolismo",
     anio: 2020,
     descripcion: "Introducción al lenguaje simbólico de la escuadra, el compás y las herramientas de trabajo.",
-    archivo: "assets/docs/simbolismo-masonico.pdf"
+    archivo: "https://drive.google.com/file/d/1s28eyItfhDbiG0fjLRjUuOMP-gJm7abi/view?usp=drive_link"
   },
   {
     id: "obr-006",
-    titulo: "Ética y Filosofía para el Aprendiz",
-    autor: "Autor por definir",
+    titulo: "Masonería para principiantes",
+    autor: "Robert Lomas",
     categoria: "filosofia",
     categoriaLabel: "Filosofía",
-    anio: 2020,
+    anio: 0,
     descripcion: "Materiales de estudio orientados a los primeros pasos del camino masónico.",
-    archivo: "assets/docs/etica-aprendiz.pdf"
+    archivo: "https://drive.google.com/file/d/1lDcnLIr3ybJ82EVG8nliyKpW3VdtR14W/view?usp=drive_link"
   }
 ];
