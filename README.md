@@ -38,7 +38,7 @@ Son sistemas distintos que resuelven necesidades distintas; el sitio institucion
 }
 ```
 
-El catálogo actual (`obr-001` a `obr-006`) son **entradas de ejemplo** con obras de dominio público conocidas, para mostrar el diseño funcionando. Reemplázalas por el acervo real de la Logia.
+El catálogo actual (`obr-001` a `obr-015`, 15 obras) son **entradas de ejemplo** con obras de dominio público conocidas, para mostrar el diseño funcionando con un stock representativo del acervo. Reemplázalas por el acervo real de la Logia.
 
 ## Cómo verlo localmente
 
